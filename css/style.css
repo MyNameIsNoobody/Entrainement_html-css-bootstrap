@@ -1,0 +1,100 @@
+/* Main CSS */
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 75px 800px 220px;
+    margin: auto;
+    max-width: 1440px;
+}
+  
+.header {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    background: white;
+}
+  
+.content {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    background: lightpink;
+}
+  
+.aside {
+    visibility: hidden;
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    background: lightgreen;
+}
+  
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    background: palegoldenrod;
+}
+
+/* Specifics CSS */
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-nav li {
+    display: inline-block;
+}
+
+.img-fluid {
+    height: 75px;
+    width: 140px;
+}
+
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.navbar-toggler {
+    margin-right: 2%;
+}
+
+/* No Repeat CSS */
+
+.container, .navbar, .img-fluid, .navbar-brand, a {
+    padding: 0;
+}
+
+.img-fluid, .navbar-brand, .navbar, a {
+    margin: 0;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (min-width: 992px) {
+    .header {
+        height: 125px;
+    }
+    
+    .content {
+        grid-column-end: 8;
+    }
+
+    .aside {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .navbar-toggler {
+        visibility: hidden;
+    }
+}
