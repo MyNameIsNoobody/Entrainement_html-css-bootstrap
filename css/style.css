@@ -1,5 +1,9 @@
 /* Main CSS */
 
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .container {
     display: grid;
     grid-template-columns: auto;
@@ -9,35 +13,20 @@
 }
   
 .header {
-    grid-column-start: 1;
-    grid-column-end: 12;
     grid-row-start: 1;
     background: white;
 }
   
 .content {
-    grid-column-start: 1;
-    grid-column-end: 12;
     grid-row-start: 2;
-    background: lightpink;
-}
-  
-.aside {
-    visibility: hidden;
-    grid-column-start: 8;
-    grid-column-end: 12;
-    grid-row-start: 2;
-    background: lightgreen;
 }
   
 .footer {
-    grid-column-start: 1;
-    grid-column-end: 12;
     grid-row-start: 3;
     background: palegoldenrod;
 }
 
-/* Specifics CSS */
+/* Specific CSS */
 
 .navbar-nav {
     width: 100%;
@@ -61,18 +50,72 @@
     width: 300px;
 }
 
+#logo {
+    color: #C80B0E
+}
+
 .navbar-toggler {
     margin-right: 2%;
 }
 
+
+
+#international-event {
+    background: #C80B0E;
+    height: auto;
+    max-width: none;
+    width: 100%;
+}
+
+#wish-card {
+    width: 90%;
+    height: auto;
+    object-fit: fit-content;
+}
+
+.text-divider {
+    display: flex;
+    align-items: center;
+    --text-divider-gap: 1rem;
+}
+
+.text-divider::after {
+    content: '';
+    height: 1px;
+    background-color: white;
+    flex-grow: 1;
+    margin-left: var(--text-divider-gap);
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.5em;
+}
+
+
 /* No Repeat CSS */
 
-.container, .navbar, .img-fluid, .navbar-brand, a {
+.header, .content, .footer {
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+.container, .navbar, #wish-card, .navbar-brand, a {
     padding: 0;
 }
 
 .img-fluid, .navbar-brand, .navbar, a {
     margin: 0;
+}
+
+#find-out, .navbar-toggler {
+    pointer-events: none;
+}
+
+#divider, h1 {
+    font-weight: 700;
 }
 
 
@@ -83,13 +126,28 @@
     .header {
         height: 125px;
     }
-    
-    .content {
-        grid-column-end: 8;
+}
+
+@media screen and (min-width: 768px) {
+    #international-event {
+        height: 350px;
     }
 
-    .aside {
-        visibility: visible;
+    #wish-card {
+        float: left;
+        width: 50%;
+        height: auto;
+        padding-left: 1rem;
+    }
+
+    h1 {
+        margin-left: 50%;
+        margin-top: 30px;
+    }
+
+    #find-out {
+        margin-top: 30px;
+        margin-left: 50%;
     }
 }
 
