@@ -25,8 +25,7 @@
 }
   
 .footer {
-    grid-row-start: 3;
-    background: palegoldenrod;
+    width: 100%;
 }
 
 
@@ -66,8 +65,15 @@
 /* Content event CSS */
 
 #international-event {
-    max-width: none;
     width: 100%;
+}
+
+#event-bg {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    left: 0;
+    height: 350px;
 }
 
 #wish-card {
@@ -120,6 +126,18 @@ h2 {
 }
 
 
+/* Footer CSS */
+
+#footer-bg {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 220px;
+    z-index: -1;
+    background: #232931;
+}
+
+
 
 /* No Repeat CSS */
 
@@ -152,19 +170,13 @@ h2 {
     height: auto;
 }
 
-.card-btn, #info-divider::before, #international-event {
+.card-btn, #info-divider::before, #event-bg {
     background: #C80B0E;
 }
 
 
 
 /* Media Queries */
-
-@media screen and (min-width: 992px) {
-    .header {
-        height: 125px;
-    }
-}
 
 @media screen and (min-width: 768px) {
     #international-event {
