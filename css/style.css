@@ -6,8 +6,11 @@
 
 .container {
     display: grid;
+}
+
+#body-container {
     grid-template-columns: auto;
-    grid-template-rows: 75px 800px 220px;
+    grid-template-rows: 75px auto 220px;
     margin: auto;
     max-width: 1440px;
 }
@@ -26,11 +29,12 @@
     background: palegoldenrod;
 }
 
-/* Specific CSS */
+
+
+/* Header CSS */
 
 .navbar-nav {
     width: 100%;
-    display: flex;
     justify-content: space-evenly;
 }
 
@@ -44,7 +48,6 @@
 }
 
 .navbar-brand {
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 300px;
@@ -60,39 +63,62 @@
 
 
 
+/* Content event CSS */
+
 #international-event {
-    background: #C80B0E;
-    height: auto;
     max-width: none;
     width: 100%;
 }
 
 #wish-card {
     width: 90%;
-    height: auto;
     object-fit: fit-content;
 }
 
-.text-divider {
-    display: flex;
+#event-divider {
     align-items: center;
-    --text-divider-gap: 1rem;
+    --event-divider-gap: 1rem;
 }
 
-.text-divider::after {
+#event-divider::after {
     content: '';
     height: 1px;
     background-color: white;
     flex-grow: 1;
-    margin-left: var(--text-divider-gap);
+    margin-left: var(--event-divider-gap);
 }
 
 h1 {
-    font-style: normal;
-    font-weight: 700;
     font-size: 2rem;
     line-height: 1.5em;
 }
+
+
+
+/* Content info CSS */
+
+#info-divider {
+    align-items: center;
+    --event-divider-gap: 1rem;
+}
+
+h2 {
+    width: 75%;
+}
+
+#info-divider::before {
+    content: '';
+    height: 3px;
+    flex-grow: 1;
+    margin-right: var(--event-divider-gap);
+}
+
+#info-container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    margin: auto;
+}
+
 
 
 /* No Repeat CSS */
@@ -110,12 +136,24 @@ h1 {
     margin: 0;
 }
 
-#find-out, .navbar-toggler {
+.btn, .navbar-toggler {
     pointer-events: none;
 }
 
-#divider, h1 {
+#divider, h1, h2 {
     font-weight: 700;
+}
+
+.navbar-nav, .navbar-brand, #event-divider, #info-divider {
+    display: flex;
+}
+
+#wish-card, #international-event {
+    height: auto;
+}
+
+.card-btn, #info-divider::before, #international-event {
+    background: #C80B0E;
 }
 
 
@@ -148,6 +186,22 @@ h1 {
     #find-out {
         margin-top: 30px;
         margin-left: 50%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-img {
+        float: left;
+        width: 50%;
+    }
+
+    .card-btn {
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 }
 
