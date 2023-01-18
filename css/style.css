@@ -10,7 +10,7 @@
 
 #body-container {
     grid-template-columns: auto;
-    grid-template-rows: 75px auto 220px;
+    grid-template-rows: 75px auto auto;
     margin: auto;
     max-width: 1440px;
 }
@@ -26,6 +26,11 @@
   
 .footer {
     width: 100%;
+    background: #232931;
+}
+
+p {
+    line-height: 2em;
 }
 
 
@@ -50,10 +55,6 @@
     justify-content: center;
     align-items: center;
     width: 300px;
-}
-
-#logo {
-    color: #C80B0E
 }
 
 .navbar-toggler {
@@ -132,10 +133,21 @@ h2 {
     position: absolute;
     left: 0;
     width: 100vw;
-    height: 220px;
+    height: 600px;
     z-index: -1;
     background: #232931;
 }
+
+.logo-footer {
+    width: 100px;
+}
+
+.footer-text {
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 
 
@@ -170,8 +182,12 @@ h2 {
     height: auto;
 }
 
-.card-btn, #info-divider::before, #event-bg {
+.card-btn, #info-divider::before, #international-event, #event-bg {
     background: #C80B0E;
+}
+
+#logo, .footer-contact {
+    color: #C80B0E
 }
 
 
