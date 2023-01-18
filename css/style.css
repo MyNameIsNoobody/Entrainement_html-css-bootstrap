@@ -107,9 +107,6 @@ h1 {
 #info-divider {
     align-items: center;
     --event-divider-gap: 1rem;
-}
-
-h2 {
     width: 75%;
 }
 
@@ -148,6 +145,32 @@ h2 {
 }
 
 
+
+/* International-event page CSS */
+
+.article-title-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article-img {
+    width: 100vw;
+    max-width: 800px;
+    object-fit: cover;
+}
+
+.btn-article {
+    background: #C80B0E;
+}
+
+.article-btn-flex {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.article-text {
+    max-width: 800px;
+}
 
 
 
